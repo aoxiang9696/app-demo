@@ -1,8 +1,14 @@
 import React, { useCallback, useState, useMemo} from "react";
-import Child from './child'
 
+
+function Child(props) {
+  return (
+    <div>{Math.random()}</div>
+  )
+}
 export default function MemoDemo() {
   const [a, setA] = useState(1);
+  const [c, setC] = useState('')
 
   const clickHandle = useCallback(() => {
     setA((a) => {
@@ -18,7 +24,10 @@ export default function MemoDemo() {
       <button onClick={clickHandle}>点点</button>
       <div>{b}</div>
       <span>{a}</span>
-     <Child/>
+      <input type="text" value={c} onChange={e=>{
+        setC(e.target.value)
+      }}/>
+     <Child text={b}/>
     </div>
   );
 }
