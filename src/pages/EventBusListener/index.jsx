@@ -8,7 +8,10 @@ export default function EventBusListener() {
         })
 
         setTimeout(function() { 
-            Bus.emit('user'); 
+            const iMonitor=Bus.emit('user'); 
+            console.log(iMonitor);
+            console.log(Bus.eventNames)
+            console.log((Bus.listeners('user')[0]),'?');
         }, 1000); 
     },[])
   return (
