@@ -7,6 +7,8 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 // import ReactVideo from './pages/reactVideo/videoplugin'
 import EventBusEmitDemo from "./pages/EventBusEmitDemo/index";
 import EventBusListener from "./pages/EventBusListener/index";
+import SocketDemo from "./pages/socketDemo/index";
+
 function App() {
   return (
     // <div className="App">
@@ -21,6 +23,7 @@ function App() {
       <Routes>
         <Route path="/" element={<EventBusEmitDemo/>} />
         <Route path="/listener" element={<EventBusListener/>} />
+        <Route path="/socketpage" element={<SocketDemo/>}/>
       </Routes>
     </BrowserRouter>
   );
