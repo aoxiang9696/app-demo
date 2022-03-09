@@ -5,13 +5,17 @@ export default function Index() {
   useEffect(() => {
     // ws://localhost:8080
     // wss://message.sandbox.shfansmall.com
-    io("wss://message.sandbox.shfansmall.com", {
-      path: "/",
-      auth: {
-        live_room_id: "8064", // 直播房间id
-        user_socket_id: "user.0vNAGZoVmV2m7QrBqaDL", // 直播用户socket的id
-      },
+    const sio=io("wss://push.shfansmall.com", {
+      
     });
+    // sio.on('news',data=>{
+    //   console.log(data);
+    //   sio.emit('my other event', { my: 'data' });
+    // })
+    sio.onAny((eventName, data)=>{
+      console.log(eventName,data)
+    })
+
   }, []);
   return <div>index</div>;
 }
