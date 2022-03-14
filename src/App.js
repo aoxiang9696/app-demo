@@ -21,9 +21,9 @@ function App() {
     // </div>
     <BrowserRouter>
       <Routes>
-        <Route path="/" element={<EventBusEmitDemo/>} />
+        <Route path="/eventbusdemo" element={<EventBusEmitDemo/>} />
         <Route path="/listener" element={<EventBusListener/>} />
-        <Route path="/socketpage" element={<SocketDemo/>}/>
+        <Route path="/" element={<SocketDemo/>}/>
       </Routes>
     </BrowserRouter>
   );

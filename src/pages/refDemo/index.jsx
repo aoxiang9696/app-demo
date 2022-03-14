@@ -39,7 +39,7 @@ export default function RefDemo() {
       {/* 点点
       </button> */}
       <input
-        type="text"
+        type='text'
         onChange={(e) => {
           const { value } = e.target;
           textRef.current = value;
