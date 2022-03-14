@@ -8,7 +8,7 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 import EventBusEmitDemo from "./pages/EventBusEmitDemo/index";
 import EventBusListener from "./pages/EventBusListener/index";
 import SocketDemo from "./pages/socketDemo/index";
-
+import ScrollTopDemo from './pages/scrollTopDemo/index'
 function App() {
   return (
     // <div className="App">
@@ -23,7 +23,8 @@ function App() {
       <Routes>
         <Route path="/eventbusdemo" element={<EventBusEmitDemo/>} />
         <Route path="/listener" element={<EventBusListener/>} />
-        <Route path="/" element={<SocketDemo/>}/>
+        <Route path="/socketdemo" element={<SocketDemo/>}/>
+        <Route path="/" element={<ScrollTopDemo/>}/>
       </Routes>
     </BrowserRouter>
   );
